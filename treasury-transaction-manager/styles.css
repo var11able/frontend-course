@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  background: #f7f7f7;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.controls label {
+  font-size: 14px;
+}
+
+.controls select,
+.controls input,
+.controls button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th,
+td {
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #eee;
+  border-bottom: 2px solid #ccc;
+}
+
+#message {
+  font-size: 14px;
+  font-weight: bold;
+  min-height: 20px;
+}
+
+.note {
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+}
+
+.note p {
+  margin: 4px 0;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

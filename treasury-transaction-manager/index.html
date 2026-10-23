@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treasury Transaction Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Treasury Transaction Manager</h1>
+
+  <div class="controls">
+    <label>Sort by
+      <select id="field-select">
+        <option value="amount">Amount</option>
+        <option value="date">Date</option>
+        <option value="customer">Customer</option>
+      </select>
+    </label>
+    <label>Algorithm
+      <select id="algo-select">
+        <option value="bubble">Bubble Sort</option>
+        <option value="merge">Merge Sort</option>
+      </select>
+    </label>
+    <button id="sort-button">Sort</button>
+  </div>
+
+  <div class="controls">
+    <label>Search type
+      <select id="search-type-select">
+        <option value="linear">Linear (Customer)</option>
+        <option value="binary">Binary (Id)</option>
+      </select>
+    </label>
+    <input type="text" id="search-input" placeholder="Search query">
+    <button id="search-button">Search</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Customer</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+  </table>
+
+  <p id="message"></p>
+
+  <div class="note">
+    <p>Complexity:</p>
+    <p>Bubble Sort: O(n^2) time, O(1) space.</p>
+    <p>Merge Sort: O(n log n) time, O(n) space.</p>
+    <p>Linear Search: O(n) time.</p>
+    <p>Binary Search: O(log n) time, requires the array sorted by id.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
