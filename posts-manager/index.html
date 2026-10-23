@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Posts Manager</h1>
+
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="Search by title">
+    <button id="search-button">Search</button>
+    <select id="sort-select">
+      <option value="id-asc">ID (asc)</option>
+      <option value="id-desc">ID (desc)</option>
+      <option value="title-asc">Title (A to Z)</option>
+      <option value="title-desc">Title (Z to A)</option>
+    </select>
+    <button id="add-button">Add Post</button>
+  </div>
+
+  <div class="table-wrap">
+    <table id="posts-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Body</th>
+        </tr>
+      </thead>
+      <tbody id="posts-body"></tbody>
+    </table>
+  </div>
+
+  <div class="pagination">
+    <button id="prev-button">Previous</button>
+    <span id="page-info"></span>
+    <button id="next-button">Next</button>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <form id="post-form" novalidate>
+        <h2>Add Post</h2>
+        <label for="title-input">Title</label>
+        <input type="text" id="title-input">
+        <span class="error" id="title-error"></span>
+
+        <label for="body-input">Body</label>
+        <textarea id="body-input" rows="4"></textarea>
+        <span class="error" id="body-error"></span>
+
+        <div class="modal-actions">
+          <button type="submit">Submit</button>
+          <button type="button" id="close-button">Close</button>
+        </div>
+      </form>
+      <div id="result" class="hidden"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

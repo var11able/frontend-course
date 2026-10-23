@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 900px;
+  background: #f7f7f7;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  flex: 1 1 200px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+select,
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th {
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+  background: #eee;
+  border-bottom: 2px solid #ccc;
+}
+
+td {
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.error {
+  display: none;
+  margin-top: 5px;
+  color: #c0392b;
+  font-size: 13px;
+}
+
+.error.visible {
+  display: block;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+#result {
+  font-size: 14px;
+}
+
+#result .created {
+  margin-top: 0;
+}
+
+#result button {
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #search-input {
+    flex: 1 1 auto;
+  }
+}
